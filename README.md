@@ -61,3 +61,31 @@ SELECT DISTINCT ProductID, ProductName, Category, Brand
 FROM Staging_Products;
 
 
+##👤 About Me:
+Hi, I'm Sibusiso, a passionate data professional with a strong background in Mathematical Sciences and experience in data analysis, data warehousing, and business intelligence. I enjoy designing efficient data systems that provide meaningful insights and empower organizations to make data-driven decisions.
+
+##🔧 Skills & Tools:
+SQL Server (T-SQL, SSIS)
+
+Power BI
+
+Excel for analytics
+
+Dimensional modeling
+
+ETL pipelines and data validation
+
+Python (for data scripting and automation)
+
+Feel free to connect with me on LinkedIn or reach out via email!
+
+📌 Future Improvements
+Automate daily ETL with SSIS or SQL Agent
+
+Implement Slowly Changing Dimensions (SCD)
+
+Add data lineage and audit logging
+
+Use views or stored procedures for BI semantic layer
+
+
