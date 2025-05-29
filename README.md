@@ -1,91 +1,91 @@
-# SQL-DATA-WAREHOURSE-PROJECT
+# Data Warehouse and Analytics Project
+
+Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
+This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+
+---
+## 🏗️ Data Architecture
+
+The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+![Data Architecture](docs/data_architecture.png)
+
+1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+
+---
+## 📖 Project Overview
+
+This project involves:
+
+1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
+3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
+4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+
+🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+- SQL Development
+- Data Architect
+- Data Engineering  
+- ETL Pipeline Developer  
+- Data Modeling  
+- Data Analytics  
+
+---
+
+## 🚀 Project Requirements
+
+### Building the Data Warehouse (Data Engineering)
+
+#### Objective
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
-## 🎯 Objectives
+#### Specifications
+- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
+- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
+- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
+- **Scope**: Focus on the latest dataset only; historization of data is not required.
+- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
-- Centralize disparate data into a unified warehouse.
-- Design a star/snowflake schema using dimensional modeling.
-- Build and automate ETL processes using SQL Server Integration Services (SSIS) or T-SQL.
-- Provide clean, structured data for reporting in tools like Power BI or Excel.
+---
 
-## 🏗️ Architecture
+## 📂 Repository Structure
+```
+data-warehouse-project/
+│
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+│
+├── docs/                               # Project documentation and architecture details
+│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
+│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
+│   ├── data_models.drawio              # Draw.io file for data models (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+│
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
+│
+├── tests/                              # Test scripts and quality files
+│
+├── README.md                           # Project overview and instructions
+├── LICENSE                             # License information for the repository
+├── .gitignore                          # Files and directories to be ignored by Git
+└── requirements.txt                    # Dependencies and requirements for the project
+```
 
-- **Data Sources**: Flat files, Excel sheets, CRM, ERP systems
-- **ETL Tool**: T-SQL Scripts and/or SQL Server Integration Services (SSIS)
-- **Database**: SQL Server 2019 (or your version)
-- **Reporting Tool**: Power BI (or Excel / SSRS)
+---
 
-## 🧱 Schema Design
+## 🛡️ License
 
-A typical **star schema** is implemented with one or more fact tables and related dimension tables.
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
 
-Example Schema:
+## 🌟 About Me
 
-Fact_Sales
-├── SaleID (PK)
-├── ProductID (FK)
-├── CustomerID (FK)
-├── DateKey (FK)
-├── Quantity
-├── TotalAmount
+Hi, I'm Sibusiso Mbatha, a passionate data professional with a strong background in Mathematical Sciences and experience in data analysis, data warehousing, and business intelligence. I enjoy designing efficient data systems that provide meaningful insights and empower organizations to make data-driven decisions.
 
-Dim_Product
-├── ProductID (PK)
-├── ProductName
-├── Category
-├── Brand
+Let's stay in touch! Feel free to connect with me on the following platforms:
 
-Dim_Customer
-├── CustomerID (PK)
-├── FullName
-├── Region
-├── Segment
-
-
-## ⚙️ ETL Process
-
-ETL is managed using:
-- T-SQL stored procedures and scripts
-- Optionally, SSIS packages for scheduled workflows
-
-### ETL Stages:
-1. **Extract**: Raw data pulled into staging tables.
-2. **Transform**: Cleansing, type casting, surrogate key generation.
-3. **Load**: Load into dimension and fact tables.
-
-Example T-SQL snippet:
-```sql
--- Load data from staging to Dim_Product
-INSERT INTO Dim_Product (ProductID, ProductName, Category, Brand)
-SELECT DISTINCT ProductID, ProductName, Category, Brand
-FROM Staging_Products;```
-
-
-##👤 About Me:
-Hi, I'm Sibusiso, a passionate data professional with a strong background in Mathematical Sciences and experience in data analysis, data warehousing, and business intelligence. I enjoy designing efficient data systems that provide meaningful insights and empower organizations to make data-driven decisions.
-
-##🔧 Skills & Tools:
-SQL Server (T-SQL, SSIS)
-
-Power BI
-
-Excel for analytics
-
-Dimensional modeling
-
-ETL pipelines and data validation
-
-Python (for data scripting and automation)
-
-Feel free to connect with me on LinkedIn or reach out via email!
-
-📌 Future Improvements
-Automate daily ETL with SSIS or SQL Agent
-
-Implement Slowly Changing Dimensions (SCD)
-
-Add data lineage and audit logging
-
-Use views or stored procedures for BI semantic layer
-
-
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sibusiso-mbatha-63109623b/)
