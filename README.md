@@ -58,7 +58,7 @@ Example T-SQL snippet:
 -- Load data from staging to Dim_Product
 INSERT INTO Dim_Product (ProductID, ProductName, Category, Brand)
 SELECT DISTINCT ProductID, ProductName, Category, Brand
-FROM Staging_Products;
+FROM Staging_Products;```
 
 
 ##👤 About Me:
